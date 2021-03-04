@@ -5,3 +5,9 @@ Built from booellean/node-build:latest
 Packages Added
 
 apostrophe-cli
+bash
+bash-completion
+bash-doc
+curl
+git
+nano
