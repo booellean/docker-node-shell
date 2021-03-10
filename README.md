@@ -4,10 +4,13 @@ Built from booellean/node-build:latest
 
 Packages Added
 
-apostrophe-cli
-bash
-bash-completion
-bash-doc
-curl
-git
-nano
+- bash
+- bash-completion
+- bash-doc
+- git
+- nano
+
+Node Packages Added
+
+- apostrophe-cli
+- nodemon

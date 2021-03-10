@@ -1,13 +1,19 @@
 FROM booellean/node-build:latest
 
-RUN apk --update add bash bash-doc bash-completion curl git nano\
+RUN apk --update add bash bash-doc bash-completion git nano\
     && rm /var/cache/apk/*
 
-RUN npm install -g apostrophe-cli
+RUN npm install -g apostrophe-cli \
+                   nodemon
 
-# COPY docker-entrypoint.sh /
-# RUN chmod 555 /docker-entrypoint.sh
-# ENTRYPOINT ["/docker-entrypoint.sh"]
+COPY docker-entrypoint.sh /
+RUN chmod 555 /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+COPY ./.bashrc /root/.bashrc
+
+RUN git config --global core.pager 'less -R'
+RUN git config --global core.editor nano
 
 WORKDIR /docker
 
