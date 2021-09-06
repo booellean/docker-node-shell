@@ -1,4 +1,4 @@
-FROM booellean/node-build:latest
+FROM booellean/node-build:12.22.1
 
 RUN apk --update add bash bash-doc bash-completion git nano\
     && rm /var/cache/apk/*
