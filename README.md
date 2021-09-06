@@ -9,6 +9,7 @@ Packages Added
 - bash-doc
 - git
 - nano
+- openssh-client
 
 Node Packages Added
 
