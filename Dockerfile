@@ -1,7 +1,9 @@
 FROM booellean/node-build:latest
 
-RUN apk --update add bash bash-doc bash-completion git nano\
+RUN apk --update add bash bash-doc bash-completion git nano openssh-client\
     && rm /var/cache/apk/*
+
+RUN mkdir -p -m 0600 ~/.ssh
 
 RUN npm install -g apostrophe-cli \
                    nodemon
