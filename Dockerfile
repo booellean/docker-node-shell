@@ -1,9 +1,9 @@
-FROM booellean/node-build:12.22.1
+FROM booellean/node-build:14.17
 
 RUN apk --update add bash bash-doc bash-completion git nano\
     && rm /var/cache/apk/*
 
-RUN npm install -g apostrophe-cli \
+RUN npm install -g @adonisjs/ace \
                    nodemon
 
 COPY docker-entrypoint.sh /
