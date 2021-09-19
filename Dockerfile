@@ -1,4 +1,4 @@
-FROM booellean/node-build:latest
+FROM booellean/node-build:16.9.1
 
 RUN apk --update add bash bash-doc bash-completion git nano openssh-client\
     && rm /var/cache/apk/*
@@ -6,6 +6,7 @@ RUN apk --update add bash bash-doc bash-completion git nano openssh-client\
 RUN mkdir -p -m 0600 ~/.ssh
 
 RUN npm install -g apostrophe-cli \
+                   @adonisjs/ace \
                    nodemon
 
 COPY docker-entrypoint.sh /
