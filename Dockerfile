@@ -1,4 +1,4 @@
-FROM booellean/node-build:16.9.1
+FROM booellean/node-build:16.14
 
 RUN apk --update add bash \
     bash-doc \ 
