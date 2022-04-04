@@ -1,6 +1,11 @@
 FROM booellean/node-build:16.9.1
 
-RUN apk --update add bash bash-doc bash-completion git nano openssh-client\
+RUN apk --update add bash \
+    bash-doc \ 
+    bash-completion \
+    git \
+    nano \
+    openssh-client \
     && rm /var/cache/apk/*
 
 RUN mkdir -p -m 0600 ~/.ssh
